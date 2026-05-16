@@ -34,10 +34,14 @@ function toHtml(p) {
 
 // ── CSS ──
 const css = `
+@page{size:Letter;margin:0}
+
+*{margin:0;padding:0;box-sizing:border-box;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+
 :root{--cream:#f5ebd7;--brown:#322318;--gold:#c8a050;--green:#55824b;--pw:215.9mm;--ph:279.4mm}
 
 /* Story page base */
-.sp{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:white;margin:0 auto}
+.sp{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:white;margin:12px auto}
 .sp img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
 
 /* Bottom overlay layout */
@@ -97,7 +101,7 @@ const css = `
 /* Print: exact Letter size, each section gets its own page */
 @media print{
   body{background:white;padding:0}
-  .sp,.cv,.sec,.lr,.fb{box-shadow:none;margin:0;page-break-after:always}
+  .sp,.cv,.sec,.lr,.fb{box-shadow:none;margin:0 auto;page-break-after:always}
 }
 `;
 
@@ -221,9 +225,7 @@ const html = `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(book.title)}</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#666;padding:12px;font-family:Georgia,'Times New Roman',serif}
-*{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#666;font-family:Georgia,'Times New Roman',serif}
 ${css}
 </style>
 </head>
