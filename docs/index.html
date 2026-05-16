@@ -14,14 +14,14 @@ body{background:#666;font-family:Georgia,'Times New Roman',serif}
 :root{--cream:#f5ebd7;--brown:#322318;--gold:#c8a050;--green:#55824b;--pw:215.9mm;--ph:279.4mm}
 
 /* Story page base */
-.sp{width:var(--pw);height:var(--ph);background:#322318;margin:12px auto;display:flex;flex-direction:column;overflow:hidden}
-.sp img{display:block;width:100%;flex:1;object-fit:cover;min-height:0}
+.sp{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:#322318;margin:12px auto}
+.sp .sp-img{display:block;width:100%;height:calc(100% - 85mm);object-fit:cover}
 
 /* Bottom area */
-.sp .bt{position:relative;height:85mm;flex-shrink:0;background:rgba(50,35,24,0.85)}
-.sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:10px 16px;z-index:3;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.sp .bt{position:absolute;bottom:0;left:0;right:0;height:85mm;background:rgba(50,35,24,0.85)}
+.sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:10px 16px;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .sp .box p{font:bold 15pt Georgia,serif;line-height:1.6;color:var(--brown)}
-.sp .num{position:absolute;bottom:4mm;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font:bold 14pt Arial,sans-serif;z-index:4;text-shadow:0 1px 3px rgba(0,0,0,0.5);letter-spacing:3px}
+.sp .num{position:absolute;bottom:4mm;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font:bold 14pt Arial,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,0.5);letter-spacing:3px}
 
 /* Left-right layout */
 .lr{width:var(--pw);height:var(--ph);display:flex;background:var(--cream);margin:0 auto}
@@ -105,84 +105,84 @@ body{background:#666;font-family:Georgia,'Times New Roman',serif}
   </table>
 </div>
 <div class="sp">
-        <img src="images/page_01.jpg" alt="">
+        <img class="sp-img" src="images/page_01.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Leo had never been camping before. Pine Lake was huge, and everything smelled like pine needles and mud. Dad was wrestling with the tent poles. Mom was pulling stuff out of the cooler.<br>Then Leo saw it. A rabbit. Small and brown. Its nose twitched like crazy.<br>"Hey, little guy," Leo whispered, and crawled after it into the trees.<br>The rabbit hopped. Leo followed. The trees got thicker. The sunlight got dimmer.</p></div>
         <div class="num">— 1 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_02.jpg" alt="">
+        <img class="sp-img" src="images/page_02.jpg" alt="">
         <div class="bt">
         <div class="box"><p>The rabbit was gone. Just gone. Leo looked around — every tree looked like every other tree.<br>"Hello? Hello!"<br>Nothing. Not even a bird.<br>His chest got tight. The sun was slipping away, and the shadows were getting longer and darker.<br>He sat down under a big tree and hugged his knees to his chest.<br>"I'm lost," he whispered.</p></div>
         <div class="num">— 2 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_03.jpg" alt="">
+        <img class="sp-img" src="images/page_03.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Then he heard his dad's voice in his head. "If you're lost, Leo, STOP. Sit down, Think, Observe, Plan."<br>He stopped walking. He sat down on a mossy rock. Deep breath in. Deep breath out.<br>There was a whistle clipped to his backpack strap. He blew three short blasts.<br>Pweee! Pweee! Pweee!<br>Nobody answered.<br>"Alright," he said. "Plan B."</p></div>
         <div class="num">— 3 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_04.jpg" alt="">
+        <img class="sp-img" src="images/page_04.jpg" alt="">
         <div class="bt">
         <div class="box"><p>He found a stream. A little one, bubbling over rocks.<br>Dad always said, "Water runs downhill, and downhill leads to people."<br>So Leo followed it. Step by step, jumping from rock to rock so his shoes wouldn't get wet.<br>A deer stood on the other side, watching him.<br>"Hi, deer," Leo said.<br>The deer blinked at him, then turned and walked into the trees.</p></div>
         <div class="num">— 4 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_05.jpg" alt="">
+        <img class="sp-img" src="images/page_05.jpg" alt="">
         <div class="bt">
         <div class="box"><p>A clearing. Flat ground. Soft moss. A fallen tree.<br>"Perfect," Leo said.<br>He leaned branches against the fallen tree to make a roof. Then he piled ferns and leaves on top. Inside, he spread dry moss on the ground.<br>It wasn't fancy. It wasn't a hotel. But it was his, and it was safe.</p></div>
         <div class="num">— 5 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_06.jpg" alt="">
+        <img class="sp-img" src="images/page_06.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Leo's stomach was growling. Loud.<br>He remembered something from a nature show — dandelions are food. The whole plant.<br>He found some by the stream, washed them in the cold water, and took a bite.<br>Bitter. Really bitter.<br>But his stomach stopped growling.<br>"Wild salad," he said. He almost laughed.</p></div>
         <div class="num">— 6 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_07.jpg" alt="">
+        <img class="sp-img" src="images/page_07.jpg" alt="">
         <div class="bt">
         <div class="box"><p>The night was getting cold. Really cold.<br>Leo cleared a patch of dirt. He circled it with stones like he'd seen in movies. He gathered dry twigs and a piece of bark.<br>Then he remembered his sunglasses. He popped the lens out and held it over the dry bark, angling it toward the last bit of sunlight.<br>Nothing.<br>He moved it. Held still. Breathed.<br>A tiny curl of smoke.<br>He blew on it gently.<br>A flame.</p></div>
         <div class="num">— 7 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_08.jpg" alt="">
+        <img class="sp-img" src="images/page_08.jpg" alt="">
         <div class="bt">
         <div class="box"><p>The fire crackled. Orange sparks flew up into the dark sky.<br>Leo added bigger sticks. The warmth was like a hug.<br>He sat there, looking up at the stars peeking through the treetops. He started humming his favorite campfire song.<br>He wasn't scared anymore.<br>He was a survivor.</p></div>
         <div class="num">— 8 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_09.jpg" alt="">
+        <img class="sp-img" src="images/page_09.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Morning came. Birds were singing.<br>Leo put more wood on the fire. The smoke was thick and gray, rising straight up into the sky.<br>Then he took off his shoes and used them to stomp giant letters in the clearing:<br>H E L P<br>Big enough to see from a helicopter.<br>He sat down next to the letters and waited.</p></div>
         <div class="num">— 9 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_10.jpg" alt="">
+        <img class="sp-img" src="images/page_10.jpg" alt="">
         <div class="bt">
         <div class="box"><p>A low hum. Getting louder.<br>A helicopter burst over the treetops!<br>Leo jumped up. He waved his red jacket over his head and blew his whistle with everything he had.<br>The helicopter got closer and closer. Then it slowly came down in the clearing.<br>A rescue worker jumped out, smiling.<br>"Good job, kid. You did everything right."</p></div>
         <div class="num">— 10 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_11.jpg" alt="">
+        <img class="sp-img" src="images/page_11.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Mom saw him first. She burst into tears and ran to him, hugging him so tight he could barely breathe.<br>"Leo! Oh, Leo!"<br>Then Dad was there too, holding them both. He was quiet for a long time.<br>"I'm proud of you," Dad finally said. "You remembered everything."<br>Leo didn't say anything. He just held them. Inside, something warm was spreading through his chest.<br>He was a boy who survived.</p></div>
         <div class="num">— 11 —</div>
         </div>
       </div>
 <div class="sp">
-        <img src="images/page_12.jpg" alt="">
+        <img class="sp-img" src="images/page_12.jpg" alt="">
         <div class="bt">
         <div class="box"><p>Back home, Leo sat at his desk with a marker and a piece of paper.<br>He wrote:<br>LEO'S WILDERNESS RULES<br>1. STOP. Sit down. Think.<br>2. Find water. Follow it.<br>3. Build shelter before dark.<br>4. Fire = signal for help.<br>5. You're stronger than you think.<br>He pinned the paper on his bedroom wall and stepped back to look at it.<br>Then he smiled.<br>He couldn't wait for the next camping trip.</p></div>
         <div class="num">— 12 —</div>

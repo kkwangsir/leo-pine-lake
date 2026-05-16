@@ -41,14 +41,14 @@ const css = `
 :root{--cream:#f5ebd7;--brown:#322318;--gold:#c8a050;--green:#55824b;--pw:215.9mm;--ph:279.4mm}
 
 /* Story page base */
-.sp{width:var(--pw);height:var(--ph);background:#322318;margin:12px auto;display:flex;flex-direction:column;overflow:hidden}
-.sp img{display:block;width:100%;flex:1;object-fit:cover;min-height:0}
+.sp{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:#322318;margin:12px auto}
+.sp .sp-img{display:block;width:100%;height:calc(100% - 85mm);object-fit:cover}
 
 /* Bottom area */
-.sp .bt{position:relative;height:85mm;flex-shrink:0;background:rgba(50,35,24,0.85)}
-.sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:10px 16px;z-index:3;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.sp .bt{position:absolute;bottom:0;left:0;right:0;height:85mm;background:rgba(50,35,24,0.85)}
+.sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:10px 16px;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .sp .box p{font:bold 15pt Georgia,serif;line-height:1.6;color:var(--brown)}
-.sp .num{position:absolute;bottom:4mm;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font:bold 14pt Arial,sans-serif;z-index:4;text-shadow:0 1px 3px rgba(0,0,0,0.5);letter-spacing:3px}
+.sp .num{position:absolute;bottom:4mm;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font:bold 14pt Arial,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,0.5);letter-spacing:3px}
 
 /* Left-right layout */
 .lr{width:var(--pw);height:var(--ph);display:flex;background:var(--cream);margin:0 auto}
@@ -124,7 +124,7 @@ function renderStoryPage(page, n) {
   switch (page.layout || 'bottom-overlay') {
     case 'bottom-overlay':
       return `<div class="sp">
-        <img src="images/${page.img}" alt="">
+        <img class="sp-img" src="images/${page.img}" alt="">
         <div class="bt">
         <div class="box"><p>${p}</p></div>
         <div class="num">— ${n} —</div>
@@ -141,7 +141,7 @@ function renderStoryPage(page, n) {
     case 'full-bleed':
       return `<div class="fb"><img src="images/${page.img}" alt=""></div>`;
     default:
-      return `<div class="sp"><img src="images/${page.img}" alt=""><div class="bt"><div class="box"><p>${p}</p></div><div class="num">— ${n} —</div></div></div>`;
+      return `<div class="sp"><img class="sp-img" src="images/${page.img}" alt=""><div class="bt"><div class="box"><p>${p}</p></div><div class="num">— ${n} —</div></div></div>`;
   }
 }
 
