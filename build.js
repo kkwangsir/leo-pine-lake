@@ -223,6 +223,7 @@ const html = `<!DOCTYPE html>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#666;padding:12px;font-family:Georgia,'Times New Roman',serif}
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 ${css}
 </style>
 </head>
