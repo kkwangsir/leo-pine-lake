@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo&#39;s Wild Survival - Full Book</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#666;padding:12px;font-family:Georgia,'Times New Roman',serif}
+
+:root{--cream:#f5ebd7;--brown:#322318;--gold:#c8a050;--green:#55824b;--pw:215.9mm;--ph:279.4mm}
+
+/* Story page base */
+.sp{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:white;margin:0 auto}
+.sp img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+
+/* Bottom overlay layout */
+.sp .bar{position:absolute;bottom:0;left:0;right:0;height:107mm;background:rgba(50,35,24,0.9);z-index:1}
+.sp .box{position:absolute;bottom:8mm;left:8mm;right:8mm;background:rgba(245,235,215,0.95);padding:14px 18px;z-index:3}
+.sp .box p{font:bold 15pt Georgia,serif;line-height:1.7;color:var(--brown)}
+.sp .gline{position:absolute;bottom:68mm;left:16mm;right:16mm;height:.8mm;background:var(--gold);z-index:3}
+.sp .num{position:absolute;bottom:59mm;left:50%;transform:translateX(-50%);width:14mm;height:14mm;border-radius:50%;background:var(--green);color:#fff;font:bold 11pt Arial,sans-serif;display:flex;align-items:center;justify-content:center;z-index:4;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+
+/* Left-right layout */
+.lr{width:var(--pw);height:var(--ph);display:flex;background:var(--cream);margin:0 auto}
+.lr .li{flex:6;overflow:hidden}
+.lr .li img{width:100%;height:100%;object-fit:cover}
+.lr .ti{flex:4;padding:30px 24px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.lr .ti p{font:bold 13pt Georgia,serif;line-height:1.8;color:var(--brown)}
+.lr .num{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:10mm;height:10mm;border-radius:50%;background:var(--green);color:#fff;font:bold 10pt Arial,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+
+/* Full bleed */
+.fb{width:var(--pw);height:var(--ph);margin:0 auto;overflow:hidden;background:white}
+.fb img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Cover */
+.cv{width:var(--pw);height:var(--ph);background:var(--cream);position:relative;margin:0 auto}
+.cv .tb,.cv .bb{height:8mm;background:var(--green)}
+.cv .bb{position:absolute;bottom:0;left:0;right:0}
+.cv .cc{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(var(--ph) - 16mm);padding:60px 30px;text-align:center}
+.cv h1{font:bold 36pt Georgia,serif;color:var(--brown);letter-spacing:2px;margin-bottom:16px}
+.cv .dv{width:100px;height:2px;background:var(--gold);margin-bottom:16px}
+.cv .st{font:italic 16pt Georgia,serif;color:var(--brown);margin-bottom:8px}
+.cv .au{font:12pt Georgia,serif;color:#888}
+
+/* Nav bar */
+.nav{width:var(--pw);display:flex;justify-content:space-between;padding:12px 20px;background:var(--brown);border-radius:0 0 4px 4px;margin:0 auto 24px}
+.nav a{color:var(--cream);text-decoration:none;font:bold 12pt Arial,sans-serif}
+.nav a:hover{color:var(--gold)}
+
+/* Content section (vocab, q, answer) */
+.sec{width:var(--pw);min-height:var(--ph);background:var(--cream);margin:0 auto;padding:20px 0 30px}
+.sec .hd{text-align:center;padding:10px 20px}
+.sec h2{color:var(--brown);font-size:20pt;margin-bottom:8px}
+.sec .ln{width:80px;height:2px;background:var(--gold);margin:0 auto 16px}
+.sec .info{font-size:11pt;font-style:italic;color:#666;margin:8mm 10mm}
+
+/* Vocab table */
+.sec table{width:190mm;margin:10mm auto;border-collapse:collapse;font-size:10pt;font-family:Arial,sans-serif}
+.sec th{background:var(--green);color:white;padding:8px 10px;text-align:left}
+.sec td{padding:8px 10px;border-bottom:1px solid #ddd;color:var(--brown)}
+.sec tr:nth-child(even) td{background:rgba(255,255,255,.5)}
+
+/* Questions */
+.sec .q{margin:0 10mm 5mm}
+.sec .qt{font-size:12pt;font-weight:bold;color:var(--brown);margin-bottom:3mm}
+.sec .op{margin-left:8px}
+.sec .op p{font-size:10.5pt;color:var(--brown);line-height:1.6}
+
+/* Answers */
+.sec .ans{margin:0 10mm 4mm;padding-bottom:8px;border-bottom:1px solid #ddd}
+.sec .ans .lt{color:var(--green);font-weight:bold;font-size:12pt}
+.sec .ans p{font-size:11pt;color:var(--brown);line-height:1.4}
+.sec .ans .ex{font-size:10pt;font-style:italic;color:#666;margin-top:3px;margin-left:6px}
+
+/* Read page (scrollable) */
+.read-page{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;background:white;margin:16px auto}
+.read-page img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+
+/* TOC */
+.toc{width:var(--pw);background:white;padding:30px;margin:0 auto 12px}
+.toc h2{color:var(--brown);margin-bottom:16px;font-size:18pt}
+.toc ul{list-style:none}
+.toc li{margin-bottom:6px}
+.toc a{color:var(--green);text-decoration:none;font-size:12pt;display:block;padding:4px 8px;border-radius:3px}
+.toc a:hover{background:var(--cream)}
+.toc .sg{font-weight:bold;color:var(--brown);margin:12px 0 6px;font-size:13pt}
+
+@media print{body{background:white;padding:0}.sp,.cv,.sec,.lr,.fb{box-shadow:none;margin:0;page-break-after:always}.nav,.toc{display:none}}
+
+
+</style>
+</head>
+<body>
+<div style="text-align:center;margin-bottom:16px"><a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>
+<div class="sp">
+        <img src="images/page_01.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>Leo's family was camping at Pine Lake for the first time. While Dad set up the tent and Mom unpacked the cooler, Leo spotted a rabbit — small, brown, with a twitchy nose.</p><p>"Come here, little guy!" he whispered, and crawled after it into the trees. The rabbit hopped. Leo followed. Deeper and deeper into the green shadows.</p></div>
+        <div class="gline"></div>
+        <div class="num">1</div>
+      </div>
+<div class="sp">
+        <img src="images/page_02.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>The rabbit disappeared. Leo looked around — the trees all looked the same. "Hello? Hello!" No answer. His heart started beating fast. The sun was going down, and the forest was getting darker.</p><p>He sat down under a big oak tree and hugged his knees. He was lost.</p></div>
+        <div class="gline"></div>
+        <div class="num">2</div>
+      </div>
+<div class="sp">
+        <img src="images/page_03.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>Then he remembered what Dad always said: "If you're lost, STOP. Sit down, Think, Observe, and Plan." Leo took a deep breath. He had a whistle on his backpack strap. He blew three short blasts.</p><p>No answer. "Okay," he said to himself. "Plan B."</p></div>
+        <div class="gline"></div>
+        <div class="num">3</div>
+      </div>
+<div class="sp">
+        <img src="images/page_04.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>He found a small stream. Dad had told him that water flows downhill, and downhill leads to people. He followed the stream, stepping carefully over wet rocks.</p><p>A deer watched him from the other side. "Hi, deer," Leo said. The deer dipped its head and walked away.</p></div>
+        <div class="gline"></div>
+        <div class="num">4</div>
+      </div>
+<div class="sp">
+        <img src="images/page_05.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>He came to a clearing — flat ground, soft moss, a fallen tree. He decided to make a shelter.</p><p>He leaned branches against the fallen tree to make a roof, then covered them with ferns and leaves. Inside, he spread dry moss to sleep on. It wasn't a hotel, but it was safe.</p></div>
+        <div class="gline"></div>
+        <div class="num">5</div>
+      </div>
+<div class="sp">
+        <img src="images/page_06.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>Leo was hungry. He remembered that dandelions are edible — the whole plant. He found some near the stream, washed them, and ate the leaves.</p><p>They were bitter, but his stomach stopped growling. "Wild salad," he said, and almost laughed.</p></div>
+        <div class="gline"></div>
+        <div class="num">6</div>
+      </div>
+<div class="sp">
+        <img src="images/page_07.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>The night was cold. Leo found clear ground, circled it with stones, and gathered dry twigs and bark. He took the lens from his sunglasses and focused sunlight onto dry bark.</p><p>Nothing happened. Then — a tiny curl of smoke. He blew gently. A flame.</p></div>
+        <div class="gline"></div>
+        <div class="num">7</div>
+      </div>
+<div class="sp">
+        <img src="images/page_08.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>The fire crackled and popped, sending orange sparks into the dark sky. Leo added bigger sticks. The warmth felt like a hug.</p><p>He sat by the fire, watching the stars between the treetops, and sang his favorite campfire song quietly. He wasn't scared anymore — he was a survivor.</p></div>
+        <div class="gline"></div>
+        <div class="num">8</div>
+      </div>
+<div class="sp">
+        <img src="images/page_09.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>Morning. Leo woke to birds singing. He put more wood on the fire to keep smoke rising. Then he used his shoes to make big letters in the clearing:</p><p>H E L P — visible from the sky. He sat down next to the letters and waited.</p></div>
+        <div class="gline"></div>
+        <div class="num">9</div>
+      </div>
+<div class="sp">
+        <img src="images/page_10.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>A low hum grew louder. A helicopter appeared over the treetops! Leo waved his red jacket and blew his whistle as loud as he could.</p><p>The helicopter hovered, then slowly came down. A rescue worker jumped out, smiling. "Good job, kid. You did everything right."</p></div>
+        <div class="gline"></div>
+        <div class="num">10</div>
+      </div>
+<div class="sp">
+        <img src="images/page_11.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>Back at camp, Mom burst into tears and hugged him so tight he couldn't breathe. Dad held him for a long time. "I'm proud of you," Dad said. "You remembered everything we practiced."</p><p>Leo felt warm inside. He was a boy who survived.</p></div>
+        <div class="gline"></div>
+        <div class="num">11</div>
+      </div>
+<div class="sp">
+        <img src="images/page_12.png" alt="">
+        <div class="bar"></div>
+        <div class="box"><p>At home, Leo pinned a paper on his bedroom wall:</p><p>LEO'S WILDERNESS RULES<br>1. STOP — sit and think<br>2. Find water and follow it<br>3. Make shelter before dark<br>4. Fire = signal<br>5. Be brave, you're stronger than you know</p><p>He smiled. He couldn't wait for the next camping trip.</p></div>
+        <div class="gline"></div>
+        <div class="num">12</div>
+      </div>
+
+<div class="sec">
+  <div class="hd"><h2>Vocabulary List</h2><div class="ln"></div></div>
+  <table><tr><th>Word</th><th>Pronunciation</th><th>Type</th><th>中文</th><th>Definition</th></tr>
+    <tr><td>whisper</td><td>/ˈwɪs.pɚ/</td><td>verb</td><td>低语</td><td>To speak very softly</td></tr>
+      <tr><td>disappear</td><td>/ˌdɪs.əˈpɪr/</td><td>verb</td><td>消失</td><td>To stop being visible</td></tr>
+      <tr><td>shelter</td><td>/ˈʃɛl.tɚ/</td><td>noun</td><td>庇护所</td><td>A place that protects you from weather</td></tr>
+      <tr><td>edible</td><td>/ˈɛd.ə.bəl/</td><td>adj</td><td>可食用的</td><td>Safe to eat</td></tr>
+      <tr><td>survivor</td><td>/sɚˈvaɪ.vɚ/</td><td>noun</td><td>幸存者</td><td>Someone who lives through danger</td></tr>
+      <tr><td>hover</td><td>/ˈhʌv.ɚ/</td><td>verb</td><td>悬停</td><td>To stay in one place in the air</td></tr>
+      <tr><td>ferns</td><td>/fɝnz/</td><td>noun</td><td>蕨类植物</td><td>Green plants with feathery leaves</td></tr>
+      <tr><td>bitter</td><td>/ˈbɪt.ɚ/</td><td>adj</td><td>苦的</td><td>A sharp, unpleasant taste</td></tr>
+      <tr><td>stream</td><td>/striːm/</td><td>noun</td><td>小溪</td><td>A small, narrow river</td></tr>
+      <tr><td>rescue</td><td>/ˈrɛs.kjuː/</td><td>noun</td><td>救援</td><td>To save someone from danger</td></tr>
+  </table>
+</div>
+<div class="sec">
+  <div class="hd"><h2>Reading Comprehension</h2><div class="ln"></div></div>
+  <p class="info">Read each question and choose the best answer.</p>
+  <div class="q"><p class="qt"><strong>1.</strong> Why did Leo get lost in the forest?</p>
+      <div class="op"><p>A. He wanted to explore the forest alone</p>
+        <p>B. He followed a rabbit into the woods</p>
+        <p>C. He ran away from his parents</p>
+        <p>D. He got on the wrong trail</p></div></div>
+    <div class="q"><p class="qt"><strong>2.</strong> What did Leo do FIRST when he realized he was lost?</p>
+      <div class="op"><p>A. He built a shelter</p>
+        <p>B. He made a fire</p>
+        <p>C. He blew his whistle and called for help</p>
+        <p>D. He followed a stream</p></div></div>
+    <div class="q"><p class="qt"><strong>3.</strong> Why did Leo follow the stream?</p>
+      <div class="op"><p>A. He was thirsty</p>
+        <p>B. He wanted to catch fish for dinner</p>
+        <p>C. His dad told him water flows downhill to people</p>
+        <p>D. The deer was drinking from it</p></div></div>
+    <div class="q"><p class="qt"><strong>4.</strong> What does &quot;shelter&quot; mean in the story?</p>
+      <div class="op"><p>A. A warm blanket</p>
+        <p>B. A place that protects you from weather</p>
+        <p>C. A type of food</p>
+        <p>D. A rescue helicopter</p></div></div>
+    <div class="q"><p class="qt"><strong>5.</strong> The story says the dandelions were &quot;edible.&quot; What does edible mean?</p>
+      <div class="op"><p>A. Poisonous and dangerous</p>
+        <p>B. Safe to eat</p>
+        <p>C. Bitter and bad-tasting</p>
+        <p>D. Very expensive</p></div></div>
+</div>
+<div class="sec">
+  <div class="hd"><h2>Reading Comprehension (Continued)</h2><div class="ln"></div></div>
+  <p class="info">Read each question and choose the best answer.</p>
+  <div class="q"><p class="qt"><strong>6.</strong> How did Leo start the fire?</p>
+      <div class="op"><p>A. He used matches from his pocket</p>
+        <p>B. He rubbed two sticks together</p>
+        <p>C. He used the lens from his sunglasses to focus sunlight</p>
+        <p>D. He found a lighter in the woods</p></div></div>
+    <div class="q"><p class="qt"><strong>7.</strong> The story says Leo used &quot;ferns&quot; for his shelter. What are ferns?</p>
+      <div class="op"><p>A. Small rocks</p>
+        <p>B. A type of green plant with feathery leaves</p>
+        <p>C. Pieces of clothing</p>
+        <p>D. Tree branches</p></div></div>
+    <div class="q"><p class="qt"><strong>8.</strong> What did Leo do to help rescuers find him in the morning?</p>
+      <div class="op"><p>A. He climbed a tall tree</p>
+        <p>B. He made a HELP sign with his shoes and kept the fire smoking</p>
+        <p>C. He walked back the way he came</p>
+        <p>D. He called 911 on a phone</p></div></div>
+    <div class="q"><p class="qt"><strong>9.</strong> The helicopter &quot;hovered&quot; before landing. What does hovered mean?</p>
+      <div class="op"><p>A. It landed very fast</p>
+        <p>B. It stayed in one place in the air</p>
+        <p>C. It made a loud noise</p>
+        <p>D. It flew away</p></div></div>
+    <div class="q"><p class="qt"><strong>10.</strong> What is the MAIN lesson Leo learned from his experience?</p>
+      <div class="op"><p>A. Never go camping again</p>
+        <p>B. Always stay with your family, and if you get lost, stay calm and use survival skills</p>
+        <p>C. Rabbits are dangerous animals</p>
+        <p>D. The forest is a scary place</p></div></div>
+</div>
+<div class="sec">
+  <div class="hd"><h2>Answer Key</h2><div class="ln"></div></div>
+  <div class="ans"><p><span class="lt">1. B</span> — He followed a rabbit into the woods</p><p class="ex">Leo saw a rabbit and crawled after it into the trees (page 1). He was just curious, not trying to run away.</p></div>
+    <div class="ans"><p><span class="lt">2. C</span> — He blew his whistle and called for help</p><p class="ex">Leo first blew three short blasts on his whistle and called out (page 3). Only when nobody answered did he move to Plan B.</p></div>
+    <div class="ans"><p><span class="lt">3. C</span> — His dad told him water flows downhill to people</p><p class="ex">Leo remembered his dad&#39;s advice: water flows downhill, and downhill leads to people (page 4).</p></div>
+    <div class="ans"><p><span class="lt">4. B</span> — A place that protects you from weather</p><p class="ex">Leo built a shelter using branches, ferns, and leaves to protect himself from the cold night air (page 5).</p></div>
+    <div class="ans"><p><span class="lt">5. B</span> — Safe to eat</p><p class="ex">Edible means safe to eat. Leo knew dandelions are edible - the whole plant can be eaten (page 6).</p></div>
+    <div class="ans"><p><span class="lt">6. C</span> — He used the lens from his sunglasses to focus sunlight</p><p class="ex">Leo took the lens out of his sunglasses and focused sunlight onto dry bark until it started smoking (page 7).</p></div>
+    <div class="ans"><p><span class="lt">7. B</span> — A type of green plant with feathery leaves</p><p class="ex">Ferns are green plants with feathery, divided leaves that grow in forests (page 5).</p></div>
+    <div class="ans"><p><span class="lt">8. B</span> — He made a HELP sign with his shoes and kept the fire smoking</p><p class="ex">Leo kept the fire smoking and used his shoes to make the word HELP in the clearing, visible from the sky (page 9).</p></div>
+    <div class="ans"><p><span class="lt">9. B</span> — It stayed in one place in the air</p><p class="ex">To hover means to stay suspended in one place in the air. The helicopter hovered before coming down (page 10).</p></div>
+    <div class="ans"><p><span class="lt">10. B</span> — Stay with family, stay calm, use survival skills</p><p class="ex">Leo&#39;s rules at the end show the main lesson: stay calm, use survival skills, and be brave (page 12). He was excited for the next trip, not scared.</p></div>
+</div>
+<div style="text-align:center;margin:16px 0 40px"><a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>
+</body>
+</html>

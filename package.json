@@ -1,0 +1,15 @@
+{
+  "name": "book-template",
+  "version": "1.0.0",
+  "description": "Svelte-based children's book template — write book.json, build to static HTML.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "svelte": "^5.55.7",
+    "vite": "^8.0.13"
+  }
+}
