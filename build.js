@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const bookDir = process.argv[2] || '.';
-const distDir = path.resolve(bookDir, 'dist');
+const distDir = path.resolve(bookDir, 'docs');
 const imagesDir = path.resolve(bookDir, 'images');
 const distImages = path.resolve(distDir, 'images');
 
@@ -178,7 +178,7 @@ function renderStoryPage(page, n) {
 function renderNav(prev, next) {
   return `<div class="nav">
   <a href="${prev}">⟨ Prev</a>
-  <a href="index.html">Cover</a>
+  <a href="contents.html">Cover</a>
   <a href="${next}">Next ⟩</a>
 </div>`;
 }
@@ -284,9 +284,18 @@ if (fs.existsSync(imagesDir)) {
 
 const totalPages = book.pages.length;
 
-// Index (cover + TOC)
-fs.writeFileSync(path.join(distDir, 'index.html'), shell(book.title, renderToc(book)));
-console.log(`  ✓ index.html`);
+// Redirect index → page 1 (sequential reading, not clickable TOC)
+const redirectHtml = `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=page-01.html"><title>${esc(book.title)}</title></head>
+<body><p><a href="page-01.html">Start reading →</a></p></body>
+</html>`;
+fs.writeFileSync(path.join(distDir, 'index.html'), redirectHtml);
+console.log(`  ✓ index.html → redirects to page-01.html`);
+
+// Contents page (cover + TOC, accessible from nav)
+fs.writeFileSync(path.join(distDir, 'contents.html'), shell(book.title, renderToc(book)));
+console.log(`  ✓ contents.html`);
 
 // Individual story pages
 book.pages.forEach((p, i) => {
@@ -301,7 +310,7 @@ book.pages.forEach((p, i) => {
 console.log(`  ✓ ${totalPages} story pages`);
 
 // Read (all pages scrollable)
-let readBody = `<div style="text-align:center;margin-bottom:16px"><a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>\n`;
+let readBody = `<div style="text-align:center;margin-bottom:16px"><a href="contents.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>\n`;
 readBody += renderReadPage(book);
 
 if (book.vocabulary) {
@@ -313,7 +322,7 @@ if (book.questions) {
   readBody += '\n' + renderAnswers(book);
 }
 
-readBody += `\n<div style="text-align:center;margin:16px 0 40px"><a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>`;
+readBody += `\n<div style="text-align:center;margin:16px 0 40px"><a href="contents.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a></div>`;
 fs.writeFileSync(path.join(distDir, 'read.html'), shell(`${book.title} - Full Book`, readBody));
 console.log(`  ✓ read.html`);
 
@@ -332,7 +341,7 @@ if (book.questions) {
   const q2 = renderQuestions(book, qHalf + 1, book.questions.length, 'Reading Comprehension (Continued)');
   fs.writeFileSync(path.join(distDir, 'questions.html'), shell(`${book.title} - Questions 1-${qHalf}`, q1 + '\n' + renderNav('vocab.html', 'questions-2.html')));
   fs.writeFileSync(path.join(distDir, 'questions-2.html'), shell(`${book.title} - Questions ${qHalf+1}-${book.questions.length}`, q2 + '\n' + renderNav('questions.html', 'answers.html')));
-  fs.writeFileSync(path.join(distDir, 'answers.html'), shell(`${book.title} - Answer Key`, renderAnswers(book) + '\n' + renderNav('questions-2.html', 'index.html')));
+  fs.writeFileSync(path.join(distDir, 'answers.html'), shell(`${book.title} - Answer Key`, renderAnswers(book) + '\n' + renderNav('questions-2.html', 'contents.html')));
   console.log(`  ✓ questions + answers`);
 }
 
