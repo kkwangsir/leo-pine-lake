@@ -1,11 +1,14 @@
-/* Leo at Pine Lake - Book Styles */
-/* Edit this file to change the look of every page */
+/* Leo at Pine Lake - Book Styles (A4 PDF-inspired layout) */
 
 :root {
   --cream: #f5ebd7;
+  --cream-r: 245; --cream-g: 235; --cream-b: 215;
   --dark-brown: #322318;
+  --dark-brown-r: 50; --dark-brown-g: 35; --dark-brown-b: 24;
   --gold: #c8a050;
+  --gold-r: 200; --gold-g: 160; --gold-b: 80;
   --green: #55824b;
+  --green-r: 85; --green-g: 130; --green-b: 75;
   --page-w: 210mm;
   --page-h: 297mm;
 }
@@ -13,7 +16,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: #888;
+  background: #666;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,84 +24,81 @@ body {
   font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-/* ---- Individual Page ---- */
-.page {
+/* ---- A4 Page ---- */
+.page-a4 {
   width: var(--page-w);
   min-height: var(--page-h);
-  background: var(--cream);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   margin-bottom: 24px;
 }
 
-/* Image fills the full page behind text */
-.page-image {
+/* Full-bleed image fills entire A4 */
+.page-img {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-}
-
-.page-image img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 /* Dark semi-transparent bar at bottom */
-.page-text {
+.dark-bar {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: rgba(50, 35, 24, 0.85);
-  padding: 18px 24px 30px;
-}
-
-/* Cream text box */
-.page-text::before {
-  content: '';
-  position: absolute;
-  bottom: 8px; left: 8px; right: 8px; top: 8px;
-  background: var(--cream);
-  border-radius: 2px;
-}
-
-.page-text p {
-  position: relative;
+  height: 107mm;
+  background: rgba(var(--dark-brown-r), var(--dark-brown-g), var(--dark-brown-b), 0.9);
   z-index: 1;
+}
+
+/* Cream text overlay box */
+.cream-box {
+  position: absolute;
+  bottom: 8mm; left: 8mm; right: 8mm;
+  background: rgba(var(--cream-r), var(--cream-g), var(--cream-b), 0.95);
+  padding: 14px 18px;
+  z-index: 3;
+}
+
+.cream-box p {
   font-size: 15pt;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--dark-brown);
-  padding: 14px 16px;
 }
 
-/* Gold accent line */
-.page-text::after {
-  content: '';
+/* Gold line above cream box */
+.gold-line {
   position: absolute;
-  top: 6px; left: 16px; right: 16px;
-  height: 2px;
+  bottom: 68mm; left: 16mm; right: 16mm;
+  height: 0.8mm;
   background: var(--gold);
+  z-index: 3;
 }
 
 /* Page number circle */
-.page-number {
+.page-circle {
   position: absolute;
-  bottom: 158px;
+  bottom: 59mm;
   left: 50%;
   transform: translateX(-50%);
-  width: 26px; height: 26px;
+  width: 14mm; height: 14mm;
   border-radius: 50%;
   background: var(--green);
-  color: white;
-  font-size: 11pt;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  z-index: 4;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.page-circle span {
+  color: white;
+  font-size: 11pt;
+  font-weight: bold;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 /* ---- Cover Page ---- */
@@ -107,14 +107,13 @@ body {
   min-height: var(--page-h);
   background: var(--cream);
   position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   margin-bottom: 24px;
 }
 
-.cover-top-bar, .cover-bottom-bar {
-  height: 12mm;
+.cover-top-bar {
+  height: 8mm;
   background: var(--green);
-  width: 100%;
 }
 
 .cover-content {
@@ -122,8 +121,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(var(--page-h) - 24mm);
-  padding: 40px 30px;
+  min-height: calc(var(--page-h) - 16mm);
+  padding: 60px 30px 40px;
   text-align: center;
 }
 
@@ -136,48 +135,64 @@ body {
 }
 
 .cover-divider {
-  width: 120px;
-  height: 3px;
+  width: 100px;
+  height: 2px;
   background: var(--gold);
   margin-bottom: 16px;
 }
 
 .cover-subtitle {
   font-size: 16pt;
+  font-style: italic;
   color: var(--dark-brown);
   margin-bottom: 8px;
-  font-style: italic;
 }
 
 .cover-author {
-  font-size: 13pt;
-  color: #666;
-  margin-bottom: 24px;
+  font-size: 12pt;
+  color: #888;
 }
 
-.cover-pine {
-  font-size: 48pt;
+.cover-bottom-bar {
+  height: 8mm;
+  background: var(--green);
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
 }
 
-/* ---- Table of Contents ---- */
-.toc {
+/* ---- Index / TOC ---- */
+.index-page {
   width: var(--page-w);
   background: white;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   margin-bottom: 24px;
 }
 
-.toc h2 { margin-bottom: 16px; color: var(--dark-brown); }
-.toc ul { list-style: none; }
-.toc li { margin-bottom: 8px; }
-.toc a { color: var(--green); text-decoration: none; font-size: 13pt; }
-.toc a:hover { text-decoration: underline; }
+.index-page h2 {
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+  font-size: 20pt;
+}
 
-/* Print */
+.index-page ul { list-style: none; }
+
+.index-page li {
+  margin-bottom: 10px;
+}
+
+.index-page a {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 14pt;
+}
+
+.index-page a:hover { text-decoration: underline; }
+
+/* ---- Print: clean A4 PDF output ---- */
 @media print {
   body { background: white; padding: 0; }
-  .page { box-shadow: none; margin: 0; page-break-after: always; }
-  .cover-page { box-shadow: none; margin: 0; }
-  .toc { display: none; }
+  .page-a4 { box-shadow: none; margin: 0; page-break-after: always; }
+  .cover-page { box-shadow: none; margin: 0; page-break-after: always; }
+  .index-page { display: none; }
 }
