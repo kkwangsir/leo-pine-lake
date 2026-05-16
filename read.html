@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo's Wild Survival - Full Story</title>
+<link rel="stylesheet" href="css/book.css">
+<style>
+.read-page {
+  width: var(--page-w);
+  height: var(--page-h);
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  margin: 16px auto;
+}
+
+.read-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.read-dark {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 107mm;
+  background: rgba(50, 35, 24, 0.9);
+  z-index: 1;
+}
+
+.read-text {
+  position: absolute;
+  bottom: 8mm; left: 8mm; right: 8mm;
+  background: rgba(245, 235, 215, 0.95);
+  padding: 14px 18px;
+  z-index: 3;
+}
+
+.read-text p {
+  font-size: 15pt;
+  font-weight: bold;
+  line-height: 1.7;
+  color: var(--dark-brown);
+}
+
+.read-gold {
+  position: absolute;
+  bottom: 68mm; left: 16mm; right: 16mm;
+  height: 0.8mm;
+  background: var(--gold);
+  z-index: 3;
+}
+
+.read-num {
+  position: absolute;
+  bottom: 59mm;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14mm; height: 14mm;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  font-size: 11pt;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+body {
+  background: #555;
+  padding: 20px 0;
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .read-page { box-shadow: none; margin: 0; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center;margin-bottom:20px">
+  <a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a>
+</div>
+
+  <div class="read-page" id="page-01">
+    <img class="read-img" src="images/page_01.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>Leo's family was camping at Pine Lake for the first time. While Dad set up the tent and Mom unpacked the cooler, Leo spotted a rabbit — small, brown, with a twitchy nose.</p><p>"Come here, little guy!" he whispered, and crawled after it into the trees. The rabbit hopped. Leo followed. Deeper and deeper into the green shadows.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">1</div>
+  </div>
+  <div class="read-page" id="page-02">
+    <img class="read-img" src="images/page_02.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>The rabbit disappeared. Leo looked around — the trees all looked the same. "Hello? Hello!" No answer. His heart started beating fast. The sun was going down, and the forest was getting darker.</p><p>He sat down under a big oak tree and hugged his knees. He was lost.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">2</div>
+  </div>
+  <div class="read-page" id="page-03">
+    <img class="read-img" src="images/page_03.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>Then he remembered what Dad always said: "If you're lost, STOP. Sit down, Think, Observe, and Plan." Leo took a deep breath. He had a whistle on his backpack strap. He blew three short blasts.</p><p>No answer. "Okay," he said to himself. "Plan B."</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">3</div>
+  </div>
+  <div class="read-page" id="page-04">
+    <img class="read-img" src="images/page_04.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>He found a small stream. Dad had told him that water flows downhill, and downhill leads to people. He followed the stream, stepping carefully over wet rocks.</p><p>A deer watched him from the other side. "Hi, deer," Leo said. The deer dipped its head and walked away.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">4</div>
+  </div>
+  <div class="read-page" id="page-05">
+    <img class="read-img" src="images/page_05.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>He came to a clearing — flat ground, soft moss, a fallen tree. He decided to make a shelter.</p><p>He leaned branches against the fallen tree to make a roof, then covered them with ferns and leaves. Inside, he spread dry moss to sleep on. It wasn't a hotel, but it was safe.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">5</div>
+  </div>
+  <div class="read-page" id="page-06">
+    <img class="read-img" src="images/page_06.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>Leo was hungry. He remembered that dandelions are edible — the whole plant. He found some near the stream, washed them, and ate the leaves.</p><p>They were bitter, but his stomach stopped growling. "Wild salad," he said, and almost laughed.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">6</div>
+  </div>
+  <div class="read-page" id="page-07">
+    <img class="read-img" src="images/page_07.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>The night was cold. Leo found clear ground, circled it with stones, and gathered dry twigs and bark. He took the lens from his sunglasses and focused sunlight onto dry bark.</p><p>Nothing happened. Then — a tiny curl of smoke. He blew gently. A flame.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">7</div>
+  </div>
+  <div class="read-page" id="page-08">
+    <img class="read-img" src="images/page_08.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>The fire crackled and popped, sending orange sparks into the dark sky. Leo added bigger sticks. The warmth felt like a hug.</p><p>He sat by the fire, watching the stars between the treetops, and sang his favorite campfire song quietly. He wasn't scared anymore — he was a survivor.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">8</div>
+  </div>
+  <div class="read-page" id="page-09">
+    <img class="read-img" src="images/page_09.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>Morning. Leo woke to birds singing. He put more wood on the fire to keep smoke rising. Then he used his shoes to make big letters in the clearing:</p><p>H E L P — visible from the sky. He sat down next to the letters and waited.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">9</div>
+  </div>
+  <div class="read-page" id="page-10">
+    <img class="read-img" src="images/page_10.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>A low hum grew louder. A helicopter appeared over the treetops! Leo waved his red jacket and blew his whistle as loud as he could.</p><p>The helicopter hovered, then slowly came down. A rescue worker jumped out, smiling. "Good job, kid. You did everything right."</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">10</div>
+  </div>
+  <div class="read-page" id="page-11">
+    <img class="read-img" src="images/page_11.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>Back at camp, Mom burst into tears and hugged him so tight he couldn't breathe. Dad held him for a long time. "I'm proud of you," Dad said. "You remembered everything we practiced."</p><p>Leo felt warm inside. He was a boy who survived.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">11</div>
+  </div>
+  <div class="read-page" id="page-12">
+    <img class="read-img" src="images/page_12.png" alt="">
+    <div class="read-dark"></div>
+    <div class="read-text">
+      <p>At home, Leo pinned a paper on his bedroom wall:</p><p>LEO'S WILDERNESS RULES<br>1. STOP — sit and think<br>2. Find water and follow it<br>3. Make shelter before dark<br>4. Fire = signal<br>5. Be brave, you're stronger than you know</p><p>He smiled. He couldn't wait for the next camping trip.</p>
+    </div>
+    <div class="read-gold"></div>
+    <div class="read-num">12</div>
+  </div>
+
+<div style="text-align:center;margin:20px 0 40px">
+  <a href="index.html" style="color:#f5ebd7;font-size:14pt;font-weight:bold;text-decoration:none">← Back to Contents</a>
+</div>
+
+</body>
+</html>
