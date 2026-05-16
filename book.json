@@ -3,41 +3,281 @@
   "subtitle": "A Story About Staying Calm<br>and Finding Your Way Home",
   "author": "Written &amp; Illustrated for Andrew",
   "pages": [
-    {"title": "The Rabbit", "layout": "bottom-overlay", "img": "page_01.png", "text": "Leo's family was camping at Pine Lake for the first time. While Dad set up the tent and Mom unpacked the cooler, Leo spotted a rabbit — small, brown, with a twitchy nose.\n\n\"Come here, little guy!\" he whispered, and crawled after it into the trees. The rabbit hopped. Leo followed. Deeper and deeper into the green shadows."},
-    {"title": "Lost", "layout": "bottom-overlay", "img": "page_02.png", "text": "The rabbit disappeared. Leo looked around — the trees all looked the same. \"Hello? Hello!\" No answer. His heart started beating fast. The sun was going down, and the forest was getting darker.\n\nHe sat down under a big oak tree and hugged his knees. He was lost."},
-    {"title": "STOP", "layout": "bottom-overlay", "img": "page_03.png", "text": "Then he remembered what Dad always said: \"If you're lost, STOP. Sit down, Think, Observe, and Plan.\" Leo took a deep breath. He had a whistle on his backpack strap. He blew three short blasts.\n\nNo answer. \"Okay,\" he said to himself. \"Plan B.\""},
-    {"title": "The Stream", "layout": "bottom-overlay", "img": "page_04.png", "text": "He found a small stream. Dad had told him that water flows downhill, and downhill leads to people. He followed the stream, stepping carefully over wet rocks.\n\nA deer watched him from the other side. \"Hi, deer,\" Leo said. The deer dipped its head and walked away."},
-    {"title": "Shelter", "layout": "bottom-overlay", "img": "page_05.png", "text": "He came to a clearing — flat ground, soft moss, a fallen tree. He decided to make a shelter.\n\nHe leaned branches against the fallen tree to make a roof, then covered them with ferns and leaves. Inside, he spread dry moss to sleep on. It wasn't a hotel, but it was safe."},
-    {"title": "Wild Food", "layout": "bottom-overlay", "img": "page_06.png", "text": "Leo was hungry. He remembered that dandelions are edible — the whole plant. He found some near the stream, washed them, and ate the leaves.\n\nThey were bitter, but his stomach stopped growling. \"Wild salad,\" he said, and almost laughed."},
-    {"title": "Fire", "layout": "bottom-overlay", "img": "page_07.png", "text": "The night was cold. Leo found clear ground, circled it with stones, and gathered dry twigs and bark. He took the lens from his sunglasses and focused sunlight onto dry bark.\n\nNothing happened. Then — a tiny curl of smoke. He blew gently. A flame."},
-    {"title": "Night", "layout": "bottom-overlay", "img": "page_08.png", "text": "The fire crackled and popped, sending orange sparks into the dark sky. Leo added bigger sticks. The warmth felt like a hug.\n\nHe sat by the fire, watching the stars between the treetops, and sang his favorite campfire song quietly. He wasn't scared anymore — he was a survivor."},
-    {"title": "HELP", "layout": "bottom-overlay", "img": "page_09.png", "text": "Morning. Leo woke to birds singing. He put more wood on the fire to keep smoke rising. Then he used his shoes to make big letters in the clearing:\n\nH E L P — visible from the sky. He sat down next to the letters and waited."},
-    {"title": "Rescue", "layout": "bottom-overlay", "img": "page_10.png", "text": "A low hum grew louder. A helicopter appeared over the treetops! Leo waved his red jacket and blew his whistle as loud as he could.\n\nThe helicopter hovered, then slowly came down. A rescue worker jumped out, smiling. \"Good job, kid. You did everything right.\""},
-    {"title": "Reunion", "layout": "bottom-overlay", "img": "page_11.png", "text": "Back at camp, Mom burst into tears and hugged him so tight he couldn't breathe. Dad held him for a long time. \"I'm proud of you,\" Dad said. \"You remembered everything we practiced.\"\n\nLeo felt warm inside. He was a boy who survived."},
-    {"title": "Home", "layout": "bottom-overlay", "img": "page_12.png", "text": "At home, Leo pinned a paper on his bedroom wall:\n\nLEO'S WILDERNESS RULES\n1. STOP — sit and think\n2. Find water and follow it\n3. Make shelter before dark\n4. Fire = signal\n5. Be brave, you're stronger than you know\n\nHe smiled. He couldn't wait for the next camping trip."}
+    {
+      "title": "The Rabbit",
+      "layout": "bottom-overlay",
+      "img": "page_01.jpg",
+      "text": "Leo's family was camping at Pine Lake for the first time. While Dad set up the tent and Mom unpacked the cooler, Leo spotted a rabbit — small, brown, with a twitchy nose.\n\n\"Come here, little guy!\" he whispered, and crawled after it into the trees. The rabbit hopped. Leo followed. Deeper and deeper into the green shadows."
+    },
+    {
+      "title": "Lost",
+      "layout": "bottom-overlay",
+      "img": "page_02.jpg",
+      "text": "The rabbit disappeared. Leo looked around — the trees all looked the same. \"Hello? Hello!\" No answer. His heart started beating fast. The sun was going down, and the forest was getting darker.\n\nHe sat down under a big oak tree and hugged his knees. He was lost."
+    },
+    {
+      "title": "STOP",
+      "layout": "bottom-overlay",
+      "img": "page_03.jpg",
+      "text": "Then he remembered what Dad always said: \"If you're lost, STOP. Sit down, Think, Observe, and Plan.\" Leo took a deep breath. He had a whistle on his backpack strap. He blew three short blasts.\n\nNo answer. \"Okay,\" he said to himself. \"Plan B.\""
+    },
+    {
+      "title": "The Stream",
+      "layout": "bottom-overlay",
+      "img": "page_04.jpg",
+      "text": "He found a small stream. Dad had told him that water flows downhill, and downhill leads to people. He followed the stream, stepping carefully over wet rocks.\n\nA deer watched him from the other side. \"Hi, deer,\" Leo said. The deer dipped its head and walked away."
+    },
+    {
+      "title": "Shelter",
+      "layout": "bottom-overlay",
+      "img": "page_05.jpg",
+      "text": "He came to a clearing — flat ground, soft moss, a fallen tree. He decided to make a shelter.\n\nHe leaned branches against the fallen tree to make a roof, then covered them with ferns and leaves. Inside, he spread dry moss to sleep on. It wasn't a hotel, but it was safe."
+    },
+    {
+      "title": "Wild Food",
+      "layout": "bottom-overlay",
+      "img": "page_06.jpg",
+      "text": "Leo was hungry. He remembered that dandelions are edible — the whole plant. He found some near the stream, washed them, and ate the leaves.\n\nThey were bitter, but his stomach stopped growling. \"Wild salad,\" he said, and almost laughed."
+    },
+    {
+      "title": "Fire",
+      "layout": "bottom-overlay",
+      "img": "page_07.jpg",
+      "text": "The night was cold. Leo found clear ground, circled it with stones, and gathered dry twigs and bark. He took the lens from his sunglasses and focused sunlight onto dry bark.\n\nNothing happened. Then — a tiny curl of smoke. He blew gently. A flame."
+    },
+    {
+      "title": "Night",
+      "layout": "bottom-overlay",
+      "img": "page_08.jpg",
+      "text": "The fire crackled and popped, sending orange sparks into the dark sky. Leo added bigger sticks. The warmth felt like a hug.\n\nHe sat by the fire, watching the stars between the treetops, and sang his favorite campfire song quietly. He wasn't scared anymore — he was a survivor."
+    },
+    {
+      "title": "HELP",
+      "layout": "bottom-overlay",
+      "img": "page_09.jpg",
+      "text": "Morning. Leo woke to birds singing. He put more wood on the fire to keep smoke rising. Then he used his shoes to make big letters in the clearing:\n\nH E L P — visible from the sky. He sat down next to the letters and waited."
+    },
+    {
+      "title": "Rescue",
+      "layout": "bottom-overlay",
+      "img": "page_10.jpg",
+      "text": "A low hum grew louder. A helicopter appeared over the treetops! Leo waved his red jacket and blew his whistle as loud as he could.\n\nThe helicopter hovered, then slowly came down. A rescue worker jumped out, smiling. \"Good job, kid. You did everything right.\""
+    },
+    {
+      "title": "Reunion",
+      "layout": "bottom-overlay",
+      "img": "page_11.jpg",
+      "text": "Back at camp, Mom burst into tears and hugged him so tight he couldn't breathe. Dad held him for a long time. \"I'm proud of you,\" Dad said. \"You remembered everything we practiced.\"\n\nLeo felt warm inside. He was a boy who survived."
+    },
+    {
+      "title": "Home",
+      "layout": "bottom-overlay",
+      "img": "page_12.jpg",
+      "text": "At home, Leo pinned a paper on his bedroom wall:\n\nLEO'S WILDERNESS RULES\n1. STOP — sit and think\n2. Find water and follow it\n3. Make shelter before dark\n4. Fire = signal\n5. Be brave, you're stronger than you know\n\nHe smiled. He couldn't wait for the next camping trip."
+    }
   ],
   "vocabulary": [
-    {"word": "whisper", "pron": "/ˈwɪs.pɚ/", "type": "verb", "zh": "低语", "en": "To speak very softly"},
-    {"word": "disappear", "pron": "/ˌdɪs.əˈpɪr/", "type": "verb", "zh": "消失", "en": "To stop being visible"},
-    {"word": "shelter", "pron": "/ˈʃɛl.tɚ/", "type": "noun", "zh": "庇护所", "en": "A place that protects you from weather"},
-    {"word": "edible", "pron": "/ˈɛd.ə.bəl/", "type": "adj", "zh": "可食用的", "en": "Safe to eat"},
-    {"word": "survivor", "pron": "/sɚˈvaɪ.vɚ/", "type": "noun", "zh": "幸存者", "en": "Someone who lives through danger"},
-    {"word": "hover", "pron": "/ˈhʌv.ɚ/", "type": "verb", "zh": "悬停", "en": "To stay in one place in the air"},
-    {"word": "ferns", "pron": "/fɝnz/", "type": "noun", "zh": "蕨类植物", "en": "Green plants with feathery leaves"},
-    {"word": "bitter", "pron": "/ˈbɪt.ɚ/", "type": "adj", "zh": "苦的", "en": "A sharp, unpleasant taste"},
-    {"word": "stream", "pron": "/striːm/", "type": "noun", "zh": "小溪", "en": "A small, narrow river"},
-    {"word": "rescue", "pron": "/ˈrɛs.kjuː/", "type": "noun", "zh": "救援", "en": "To save someone from danger"}
+    {
+      "word": "whisper",
+      "pron": "/ˈwɪs.pɚ/",
+      "type": "verb",
+      "zh": "低语",
+      "en": "To speak very softly"
+    },
+    {
+      "word": "disappear",
+      "pron": "/ˌdɪs.əˈpɪr/",
+      "type": "verb",
+      "zh": "消失",
+      "en": "To stop being visible"
+    },
+    {
+      "word": "shelter",
+      "pron": "/ˈʃɛl.tɚ/",
+      "type": "noun",
+      "zh": "庇护所",
+      "en": "A place that protects you from weather"
+    },
+    {
+      "word": "edible",
+      "pron": "/ˈɛd.ə.bəl/",
+      "type": "adj",
+      "zh": "可食用的",
+      "en": "Safe to eat"
+    },
+    {
+      "word": "survivor",
+      "pron": "/sɚˈvaɪ.vɚ/",
+      "type": "noun",
+      "zh": "幸存者",
+      "en": "Someone who lives through danger"
+    },
+    {
+      "word": "hover",
+      "pron": "/ˈhʌv.ɚ/",
+      "type": "verb",
+      "zh": "悬停",
+      "en": "To stay in one place in the air"
+    },
+    {
+      "word": "ferns",
+      "pron": "/fɝnz/",
+      "type": "noun",
+      "zh": "蕨类植物",
+      "en": "Green plants with feathery leaves"
+    },
+    {
+      "word": "bitter",
+      "pron": "/ˈbɪt.ɚ/",
+      "type": "adj",
+      "zh": "苦的",
+      "en": "A sharp, unpleasant taste"
+    },
+    {
+      "word": "stream",
+      "pron": "/striːm/",
+      "type": "noun",
+      "zh": "小溪",
+      "en": "A small, narrow river"
+    },
+    {
+      "word": "rescue",
+      "pron": "/ˈrɛs.kjuː/",
+      "type": "noun",
+      "zh": "救援",
+      "en": "To save someone from danger"
+    }
   ],
   "questions": [
-    {"n": 1, "q": "Why did Leo get lost in the forest?", "opts": ["A. He wanted to explore the forest alone", "B. He followed a rabbit into the woods", "C. He ran away from his parents", "D. He got on the wrong trail"], "ans": "B", "text": "He followed a rabbit into the woods", "exp": "Leo saw a rabbit and crawled after it into the trees (page 1). He was just curious, not trying to run away."},
-    {"n": 2, "q": "What did Leo do FIRST when he realized he was lost?", "opts": ["A. He built a shelter", "B. He made a fire", "C. He blew his whistle and called for help", "D. He followed a stream"], "ans": "C", "text": "He blew his whistle and called for help", "exp": "Leo first blew three short blasts on his whistle and called out (page 3). Only when nobody answered did he move to Plan B."},
-    {"n": 3, "q": "Why did Leo follow the stream?", "opts": ["A. He was thirsty", "B. He wanted to catch fish for dinner", "C. His dad told him water flows downhill to people", "D. The deer was drinking from it"], "ans": "C", "text": "His dad told him water flows downhill to people", "exp": "Leo remembered his dad's advice: water flows downhill, and downhill leads to people (page 4)."},
-    {"n": 4, "q": "What does \"shelter\" mean in the story?", "opts": ["A. A warm blanket", "B. A place that protects you from weather", "C. A type of food", "D. A rescue helicopter"], "ans": "B", "text": "A place that protects you from weather", "exp": "Leo built a shelter using branches, ferns, and leaves to protect himself from the cold night air (page 5)."},
-    {"n": 5, "q": "The story says the dandelions were \"edible.\" What does edible mean?", "opts": ["A. Poisonous and dangerous", "B. Safe to eat", "C. Bitter and bad-tasting", "D. Very expensive"], "ans": "B", "text": "Safe to eat", "exp": "Edible means safe to eat. Leo knew dandelions are edible - the whole plant can be eaten (page 6)."},
-    {"n": 6, "q": "How did Leo start the fire?", "opts": ["A. He used matches from his pocket", "B. He rubbed two sticks together", "C. He used the lens from his sunglasses to focus sunlight", "D. He found a lighter in the woods"], "ans": "C", "text": "He used the lens from his sunglasses to focus sunlight", "exp": "Leo took the lens out of his sunglasses and focused sunlight onto dry bark until it started smoking (page 7)."},
-    {"n": 7, "q": "The story says Leo used \"ferns\" for his shelter. What are ferns?", "opts": ["A. Small rocks", "B. A type of green plant with feathery leaves", "C. Pieces of clothing", "D. Tree branches"], "ans": "B", "text": "A type of green plant with feathery leaves", "exp": "Ferns are green plants with feathery, divided leaves that grow in forests (page 5)."},
-    {"n": 8, "q": "What did Leo do to help rescuers find him in the morning?", "opts": ["A. He climbed a tall tree", "B. He made a HELP sign with his shoes and kept the fire smoking", "C. He walked back the way he came", "D. He called 911 on a phone"], "ans": "B", "text": "He made a HELP sign with his shoes and kept the fire smoking", "exp": "Leo kept the fire smoking and used his shoes to make the word HELP in the clearing, visible from the sky (page 9)."},
-    {"n": 9, "q": "The helicopter \"hovered\" before landing. What does hovered mean?", "opts": ["A. It landed very fast", "B. It stayed in one place in the air", "C. It made a loud noise", "D. It flew away"], "ans": "B", "text": "It stayed in one place in the air", "exp": "To hover means to stay suspended in one place in the air. The helicopter hovered before coming down (page 10)."},
-    {"n": 10, "q": "What is the MAIN lesson Leo learned from his experience?", "opts": ["A. Never go camping again", "B. Always stay with your family, and if you get lost, stay calm and use survival skills", "C. Rabbits are dangerous animals", "D. The forest is a scary place"], "ans": "B", "text": "Stay with family, stay calm, use survival skills", "exp": "Leo's rules at the end show the main lesson: stay calm, use survival skills, and be brave (page 12). He was excited for the next trip, not scared."}
+    {
+      "n": 1,
+      "q": "Why did Leo get lost in the forest?",
+      "opts": [
+        "A. He wanted to explore the forest alone",
+        "B. He followed a rabbit into the woods",
+        "C. He ran away from his parents",
+        "D. He got on the wrong trail"
+      ],
+      "ans": "B",
+      "text": "He followed a rabbit into the woods",
+      "exp": "Leo saw a rabbit and crawled after it into the trees (page 1). He was just curious, not trying to run away."
+    },
+    {
+      "n": 2,
+      "q": "What did Leo do FIRST when he realized he was lost?",
+      "opts": [
+        "A. He built a shelter",
+        "B. He made a fire",
+        "C. He blew his whistle and called for help",
+        "D. He followed a stream"
+      ],
+      "ans": "C",
+      "text": "He blew his whistle and called for help",
+      "exp": "Leo first blew three short blasts on his whistle and called out (page 3). Only when nobody answered did he move to Plan B."
+    },
+    {
+      "n": 3,
+      "q": "Why did Leo follow the stream?",
+      "opts": [
+        "A. He was thirsty",
+        "B. He wanted to catch fish for dinner",
+        "C. His dad told him water flows downhill to people",
+        "D. The deer was drinking from it"
+      ],
+      "ans": "C",
+      "text": "His dad told him water flows downhill to people",
+      "exp": "Leo remembered his dad's advice: water flows downhill, and downhill leads to people (page 4)."
+    },
+    {
+      "n": 4,
+      "q": "What does \"shelter\" mean in the story?",
+      "opts": [
+        "A. A warm blanket",
+        "B. A place that protects you from weather",
+        "C. A type of food",
+        "D. A rescue helicopter"
+      ],
+      "ans": "B",
+      "text": "A place that protects you from weather",
+      "exp": "Leo built a shelter using branches, ferns, and leaves to protect himself from the cold night air (page 5)."
+    },
+    {
+      "n": 5,
+      "q": "The story says the dandelions were \"edible.\" What does edible mean?",
+      "opts": [
+        "A. Poisonous and dangerous",
+        "B. Safe to eat",
+        "C. Bitter and bad-tasting",
+        "D. Very expensive"
+      ],
+      "ans": "B",
+      "text": "Safe to eat",
+      "exp": "Edible means safe to eat. Leo knew dandelions are edible - the whole plant can be eaten (page 6)."
+    },
+    {
+      "n": 6,
+      "q": "How did Leo start the fire?",
+      "opts": [
+        "A. He used matches from his pocket",
+        "B. He rubbed two sticks together",
+        "C. He used the lens from his sunglasses to focus sunlight",
+        "D. He found a lighter in the woods"
+      ],
+      "ans": "C",
+      "text": "He used the lens from his sunglasses to focus sunlight",
+      "exp": "Leo took the lens out of his sunglasses and focused sunlight onto dry bark until it started smoking (page 7)."
+    },
+    {
+      "n": 7,
+      "q": "The story says Leo used \"ferns\" for his shelter. What are ferns?",
+      "opts": [
+        "A. Small rocks",
+        "B. A type of green plant with feathery leaves",
+        "C. Pieces of clothing",
+        "D. Tree branches"
+      ],
+      "ans": "B",
+      "text": "A type of green plant with feathery leaves",
+      "exp": "Ferns are green plants with feathery, divided leaves that grow in forests (page 5)."
+    },
+    {
+      "n": 8,
+      "q": "What did Leo do to help rescuers find him in the morning?",
+      "opts": [
+        "A. He climbed a tall tree",
+        "B. He made a HELP sign with his shoes and kept the fire smoking",
+        "C. He walked back the way he came",
+        "D. He called 911 on a phone"
+      ],
+      "ans": "B",
+      "text": "He made a HELP sign with his shoes and kept the fire smoking",
+      "exp": "Leo kept the fire smoking and used his shoes to make the word HELP in the clearing, visible from the sky (page 9)."
+    },
+    {
+      "n": 9,
+      "q": "The helicopter \"hovered\" before landing. What does hovered mean?",
+      "opts": [
+        "A. It landed very fast",
+        "B. It stayed in one place in the air",
+        "C. It made a loud noise",
+        "D. It flew away"
+      ],
+      "ans": "B",
+      "text": "It stayed in one place in the air",
+      "exp": "To hover means to stay suspended in one place in the air. The helicopter hovered before coming down (page 10)."
+    },
+    {
+      "n": 10,
+      "q": "What is the MAIN lesson Leo learned from his experience?",
+      "opts": [
+        "A. Never go camping again",
+        "B. Always stay with your family, and if you get lost, stay calm and use survival skills",
+        "C. Rabbits are dangerous animals",
+        "D. The forest is a scary place"
+      ],
+      "ans": "B",
+      "text": "Stay with family, stay calm, use survival skills",
+      "exp": "Leo's rules at the end show the main lesson: stay calm, use survival skills, and be brave (page 12). He was excited for the next trip, not scared."
+    }
   ]
 }
