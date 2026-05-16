@@ -48,7 +48,7 @@ const css = `
 .sp .bar{position:absolute;bottom:0;left:0;right:0;height:107mm;background:rgba(50,35,24,0.85);z-index:1}
 .sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:12px 18px;z-index:3;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .sp .box p{font:bold 15pt Georgia,serif;line-height:1.7;color:var(--brown)}
-.sp .num{position:absolute;bottom:5mm;left:50%;transform:translateX(-50%);color:#fff;font:bold 10pt Arial,sans-serif;z-index:4;opacity:0.8}
+.sp .num{position:absolute;bottom:5mm;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font:bold 14pt Arial,sans-serif;z-index:4;text-shadow:0 1px 3px rgba(0,0,0,0.5);letter-spacing:3px}
 
 /* Left-right layout */
 .lr{width:var(--pw);height:var(--ph);display:flex;background:var(--cream);margin:0 auto}
@@ -127,7 +127,7 @@ function renderStoryPage(page, n) {
         <img src="images/${page.img}" alt="">
         <div class="bar"></div>
         <div class="box"><p>${p}</p></div>
-        <div class="num">${n}</div>
+        <div class="num">— ${n} —</div>
       </div>`;
     case 'left-right':
       return `<div class="lr">
@@ -140,7 +140,7 @@ function renderStoryPage(page, n) {
     case 'full-bleed':
       return `<div class="fb"><img src="images/${page.img}" alt=""></div>`;
     default:
-      return `<div class="sp"><img src="images/${page.img}" alt=""><div class="bar"></div><div class="box"><p>${p}</p></div><div class="num">${n}</div></div>`;
+      return `<div class="sp"><img src="images/${page.img}" alt=""><div class="bar"></div><div class="box"><p>${p}</p></div><div class="num">— ${n} —</div></div>`;
   }
 }
 
