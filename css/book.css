@@ -1,4 +1,4 @@
-/* Leo at Pine Lake - Book Styles (A4 PDF-inspired layout) */
+/* Leo at Pine Lake / Leo's Wild Survival - Book Styles */
 
 :root {
   --cream: #f5ebd7;
@@ -32,10 +32,10 @@ body {
   overflow: hidden;
   background: white;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
-/* Full-bleed image fills entire A4 */
+/* Full-bleed image */
 .page-img {
   position: absolute;
   top: 0; left: 0;
@@ -44,7 +44,7 @@ body {
   display: block;
 }
 
-/* Dark semi-transparent bar at bottom */
+/* Dark bar */
 .dark-bar {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -53,7 +53,7 @@ body {
   z-index: 1;
 }
 
-/* Cream text overlay box */
+/* Cream text box */
 .cream-box {
   position: absolute;
   bottom: 8mm; left: 8mm; right: 8mm;
@@ -69,7 +69,7 @@ body {
   color: var(--dark-brown);
 }
 
-/* Gold line above cream box */
+/* Gold line */
 .gold-line {
   position: absolute;
   bottom: 68mm; left: 16mm; right: 16mm;
@@ -101,6 +101,28 @@ body {
   font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
+/* ---- Navigation Bar ---- */
+.nav-bar {
+  width: var(--page-w);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--dark-brown);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-bottom: 24px;
+}
+
+.nav-bar a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-bar a:hover { color: var(--gold); }
+
 /* ---- Cover Page ---- */
 .cover-page {
   width: var(--page-w);
@@ -108,7 +130,7 @@ body {
   background: var(--cream);
   position: relative;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .cover-top-bar {
@@ -160,39 +182,168 @@ body {
   bottom: 0; left: 0; right: 0;
 }
 
+/* ---- Title Bar (for vocab/questions pages) ---- */
+.title-bar {
+  background: var(--cream);
+  padding: 20px 20px 10px;
+  text-align: center;
+}
+
+.title-bar h2 {
+  color: var(--dark-brown);
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.title-gold-line {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 8px auto 0;
+}
+
+/* ---- Vocab Page ---- */
+.vocab-page {
+  background: var(--cream);
+  padding-bottom: 20px;
+  min-height: var(--page-h);
+}
+
+.vocab-table {
+  width: 190mm;
+  margin: 10mm auto;
+  border-collapse: collapse;
+  font-size: 10pt;
+}
+
+.vocab-table th {
+  background: var(--green);
+  color: white;
+  padding: 6px 8px;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+  font-size: 9pt;
+}
+
+.vocab-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+  color: var(--dark-brown);
+  font-size: 10pt;
+}
+
+.vocab-table tr:nth-child(even) td {
+  background: rgba(255,255,255,0.5);
+}
+
+/* ---- Questions Page ---- */
+.q-page {
+  background: var(--cream);
+  padding-bottom: 20px;
+  min-height: var(--page-h);
+}
+
+.q-instruction {
+  font-size: 11pt;
+  font-style: italic;
+  color: #666;
+  margin: 8mm 10mm;
+}
+
+.q-item {
+  margin: 0 10mm 5mm;
+}
+
+.q-text {
+  font-size: 12pt;
+  font-weight: bold;
+  color: var(--dark-brown);
+  margin-bottom: 3mm;
+}
+
+.q-choices {
+  margin-left: 6mm;
+}
+
+.q-choices p {
+  font-size: 10.5pt;
+  color: var(--dark-brown);
+  line-height: 1.6;
+}
+
+/* ---- Answer Key Page ---- */
+.answer-page {
+  background: var(--cream);
+  padding-bottom: 20px;
+  min-height: var(--page-h);
+}
+
+.ans-item {
+  margin: 0 10mm 4mm;
+  padding-bottom: 3mm;
+  border-bottom: 1px solid #ddd;
+}
+
+.ans-letter {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.ans-item p {
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--dark-brown);
+}
+
+.ans-exp {
+  font-size: 10pt;
+  font-style: italic;
+  color: #666;
+  margin-top: 2mm;
+  margin-left: 4mm;
+}
+
 /* ---- Index / TOC ---- */
 .index-page {
   width: var(--page-w);
   background: white;
-  padding: 40px;
+  padding: 30px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .index-page h2 {
   color: var(--dark-brown);
-  margin-bottom: 20px;
-  font-size: 20pt;
+  margin-bottom: 16px;
+  font-size: 18pt;
 }
 
 .index-page ul { list-style: none; }
 
 .index-page li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .index-page a {
   color: var(--green);
   text-decoration: none;
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 .index-page a:hover { text-decoration: underline; }
 
-/* ---- Print: clean A4 PDF output ---- */
+.index-page .section-title {
+  font-weight: bold;
+  color: var(--dark-brown);
+  margin: 12px 0 6px;
+  font-size: 13pt;
+}
+
+/* ---- Print ---- */
 @media print {
   body { background: white; padding: 0; }
   .page-a4 { box-shadow: none; margin: 0; page-break-after: always; }
   .cover-page { box-shadow: none; margin: 0; page-break-after: always; }
-  .index-page { display: none; }
+  .nav-bar { display: none; }
 }
