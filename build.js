@@ -46,10 +46,9 @@ const css = `
 
 /* Bottom overlay layout */
 .sp .bar{position:absolute;bottom:0;left:0;right:0;height:107mm;background:rgba(50,35,24,0.85);z-index:1}
-.sp .box{position:absolute;bottom:20mm;left:8mm;right:8mm;background:rgba(245,235,215,0.95);padding:14px 18px;z-index:3}
+.sp .box{position:absolute;bottom:20mm;left:10mm;right:10mm;background:rgba(245,235,215,0.96);padding:12px 18px;z-index:3;border-radius:6px;border:1px solid rgba(200,160,80,0.4);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 .sp .box p{font:bold 15pt Georgia,serif;line-height:1.7;color:var(--brown)}
-.sp .gline{position:absolute;bottom:95mm;left:28mm;right:28mm;height:.6mm;background:var(--gold);z-index:3}
-.sp .num{position:absolute;bottom:5mm;left:50%;transform:translateX(-50%);color:#fff;font:bold 8pt Arial,sans-serif;z-index:4;opacity:0.7}
+.sp .num{position:absolute;bottom:5mm;left:50%;transform:translateX(-50%);color:#fff;font:bold 10pt Arial,sans-serif;z-index:4;opacity:0.8}
 
 /* Left-right layout */
 .lr{width:var(--pw);height:var(--ph);display:flex;background:var(--cream);margin:0 auto}
@@ -128,7 +127,6 @@ function renderStoryPage(page, n) {
         <img src="images/${page.img}" alt="">
         <div class="bar"></div>
         <div class="box"><p>${p}</p></div>
-        <div class="gline"></div>
         <div class="num">${n}</div>
       </div>`;
     case 'left-right':
@@ -142,7 +140,7 @@ function renderStoryPage(page, n) {
     case 'full-bleed':
       return `<div class="fb"><img src="images/${page.img}" alt=""></div>`;
     default:
-      return `<div class="sp"><img src="images/${page.img}" alt=""><div class="bar"></div><div class="box"><p>${p}</p></div><div class="gline"></div><div class="num">${n}</div></div>`;
+      return `<div class="sp"><img src="images/${page.img}" alt=""><div class="bar"></div><div class="box"><p>${p}</p></div><div class="num">${n}</div></div>`;
   }
 }
 
