@@ -9,8 +9,8 @@
   --gold-r: 200; --gold-g: 160; --gold-b: 80;
   --green: #55824b;
   --green-r: 85; --green-g: 130; --green-b: 75;
-  --page-w: 210mm;
-  --page-h: 297mm;
+  --page-w: 215.9mm;
+  --page-h: 279.4mm;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
